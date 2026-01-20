@@ -1,0 +1,289 @@
+/* --- Reset Básico (Zerar margens) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- Paleta de Cores --- */
+:root {
+    --azul-principal: #003366; /* Azul escuro passa confiança */
+    --azul-claro: #0055a5;
+    --branco: #ffffff;
+    --cinza-fundo: #f4f4f4;
+    --cinza-texto: #333333;
+}
+
+body {
+    color: var(--cinza-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho --- */
+#cabecalho-principal {
+    background-color: var(--branco);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky; /* Menu fica fixo no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+#cabecalho-principal .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--azul-principal);
+    text-transform: uppercase;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    color: var(--cinza-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-navegacao a:hover {
+    color: var(--azul-claro);
+}
+
+.menu-mobile-icone {
+    display: none; /* Escondido no Desktop */
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Botões */
+.botao-destaque {
+    background-color: var(--azul-principal);
+    color: var(--branco) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.botao-destaque:hover {
+    background-color: var(--azul-claro);
+}
+
+.botao-cta {
+    display: inline-block;
+    background-color: #ff9900; /* Laranja para chamar atenção (Call to Action) */
+    color: var(--branco);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.botao-cta:hover {
+    background-color: #e68a00;
+}
+
+/* --- Seção Apresentação (Hero) --- */
+.secao-apresentacao {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    padding: 80px 0;
+}
+
+.conteudo-apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Quebra linha no mobile */
+}
+
+.texto-apresentacao {
+    flex: 1;
+}
+
+.texto-apresentacao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- Moldes para Fotos (Placeholders) --- */
+.molde-foto-apresentacao {
+    flex: 1;
+    height: 300px;
+    background-color: #cccccc; /* Cor cinza indicando local da foto */
+    border: 2px dashed #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+.molde-foto-perfil {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background-color: #cccccc;
+    border: 2px dashed #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* --- Seção Serviços --- */
+.secao-servicos {
+    padding: 80px 0;
+    background-color: var(--cinza-fundo);
+    text-align: center;
+}
+
+.secao-servicos h2, .secao-sobre h2, .secao-contato h2 {
+    color: var(--azul-principal);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cartao-servico {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.cartao-servico:hover {
+    transform: translateY(-5px); /* Efeito de subir ao passar o mouse */
+}
+
+/* --- Seção Sobre --- */
+.secao-sobre {
+    padding: 80px 0;
+}
+
+.container-sobre {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.texto-sobre {
+    flex: 1;
+}
+
+/* --- Seção Contato --- */
+.secao-contato {
+    padding: 80px 0;
+    background-color: var(--cinza-fundo);
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.grupo-campo input, 
+.grupo-campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.botao-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: var(--azul-claro);
+}
+
+/* --- Rodapé --- */
+.rodape {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+    .menu-navegacao {
+        display: none; /* Esconde menu padrão */
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: var(--branco);
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    }
+
+    .menu-navegacao.ativo {
+        display: block; /* Mostra menu quando ativo */
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu-mobile-icone {
+        display: block;
+    }
+    
+    .texto-apresentacao h1 {
+        font-size: 2rem;
+    }
+  }
