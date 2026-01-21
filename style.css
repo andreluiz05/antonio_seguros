@@ -258,6 +258,50 @@ body {
     font-size: 0.9rem;
 }
 
+/* --- Botão Flutuante WhatsApp --- */
+.botao-whatsapp {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 30px;    /* Distância do fundo */
+    right: 30px;     /* Distância da direita */
+    z-index: 9999;   /* Garante que fique acima de tudo */
+    
+    background-color: #25d366; /* Verde Oficial do WhatsApp */
+    color: #ffffff;
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Deixa redondinho */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.botao-whatsapp:hover {
+    transform: scale(1.1); /* Aumenta um pouquinho */
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Ajuste para celular (um pouco menor) */
+@media (max-width: 768px) {
+    .botao-whatsapp {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    /* Ajusta o tamanho do ícone dentro da bolinha no celular */
+    .botao-whatsapp svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 /* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
     .menu-navegacao {
