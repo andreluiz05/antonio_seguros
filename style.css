@@ -268,8 +268,8 @@ body {
     background-color: #25d366; /* Verde Oficial do WhatsApp */
     color: #ffffff;
     
-    width: 85px;
-    height: 85px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%; /* Deixa redondinho */
     
     display: flex;
